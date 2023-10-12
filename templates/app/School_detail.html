@@ -22,5 +22,7 @@
 
     <h3>Age of the student is {{st.stage}}</h3>
     {% endfor %}
+
+<h1><a href="{% url 'update' pk=schoolobj.pk %}">update</a></h1>
 </center>
 {% endblock %}

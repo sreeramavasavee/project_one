@@ -4,11 +4,21 @@
 {% endblock %}
 
 {% block body_block %}
+{% if form.instance.pk %}
+<h1>update school details</h1>
+{% else %}
 <h1>CREATED SCHOOL DETAILS</h1>
+{% endif %}
 <form method="POST">
     {% csrf_token %}
     {{form.as_p}}
-    <input type="submit" value="submit">
+
+
+{% if form.instance.pk %}
+    <input type="submit" value="update">
+{% else %}
+<input type="submit" value="create">
+{% endif %}
 </form>
 
 {% endblock %}

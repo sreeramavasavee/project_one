@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView,DetailView,TemplateView,CreateView
+from django.views.generic import ListView,DetailView,TemplateView,CreateView,UpdateView,DeleteView
 from app.models import *
 
 # Create your views here.
@@ -18,3 +18,7 @@ class School_create(CreateView):
     model=School
     fields='__all__'
     
+class SchoolUpdate(UpdateView):
+    model=School
+    fields='__all__'
+
